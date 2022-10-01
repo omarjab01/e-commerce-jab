@@ -1,9 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --bg-color: rgb(51, 51, 51);
+  --darker-color: rgb(26, 26, 26);
+  --ligherColor : rgb(71, 71, 71);
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, Poppins, sans-serif;
 }
 
 a {
@@ -21,6 +30,193 @@ a {
   }
   body {
     color: white;
-    background: black;
+    background: rgb(20, 20, 20);
   }
+}
+
+.hamburgerMenu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75vw;
+  background-color: var(--bg-color);
+  height: 100vh;
+}
+
+.overlay{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: rgba(0,0,0,.8);
+}
+
+.productDayInfo{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0,0,0,.3);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.titoloProdottoGiorno {
+  max-width: 16rem;
+}
+
+.dropdownMenuProfile{
+  z-index: 4;
+  position: absolute;
+  float: right;
+  top: 4.8rem;
+  right: 15px;
+  /* ----------------------- */
+  background-color: var(--bg-color);
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.dropdownMenuProfile::before{
+  content: '';
+  position: absolute;
+  top: -.5rem;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  background-color: var(--bg-color);
+}
+
+.categoria {
+  background-color: var(--bg-color);
+}
+
+.inputSearch{
+  background-color: var(--bg-color);
+  position: relative;
+  height: 120px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.inputSearch > input {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  background-color: var(--darker-color);
+  border-radius: 15px;
+}
+
+.inputSearch > span{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-body{
+  background-color: var(--darker-color);
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+@media only screen and (min-width: 640px){
+  .productImageCard{
+    height: 420px;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  .productImageCard{
+    height: 520px;
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  .productImageCard{
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 640px){
+  .productDay{
+    height: 800px;
+  }
+}
+
+@media only screen and (max-width: 640px){
+  .productDayInfo{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0,0,0,.3);
+    padding: .5rem;
+    border-radius: 10px;
+  }
+}
+
+.productDay{
+  height: 800px;
+}
+
+@media only screen and (min-width: 640px){
+  .inputSearch{
+    background-color: var(--bg-color);
+    position: relative;
+    height: 100px;
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
+.inputSearchField{
+  background: none;
+}
+
+.darkColor {
+  background-color: var(--bg-color);
+}
+
+.topFilter{
+  background-color: var(--bg-color);
+}
+
+@media only screen and (min-width: 640px){
+  .borderBottomFilter{
+    border-bottom: 1px solid var(--ligherColor);
+    padding-bottom: 2rem;
+  }
+}
+
+.adBanner {
+  max-height: 290px;
+}
+
+/* .authForm{
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: 15px;
+  width: 90vw;
+}
+
+@media only screen and (min-width: 640px){
+  .authForm{
+    max-width: 520px;
+    margin: 0 auto;
+  }
+} */
+
+.loginPage{
+  min-height: calc(90vh);
 }
